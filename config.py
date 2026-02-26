@@ -2,6 +2,7 @@
 
 from perplexity import Perplexity
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from typing import List,Dict
 
@@ -21,27 +22,32 @@ load_dotenv("environment_test.env")
 # print(response.output_text)
 
 class Config:
+    # data path
+    PROJECT_ROOT = Path(__file__).parent
+    DATA_DIR = PROJECT_ROOT / "data"
+    RAW_CSV_DIR = DATA_DIR / "raw_traffic_reports"
+    PROCESSED_DIR = DATA_DIR / "processed_traffic_reports"
+
     # API
     PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
     LLM_MODEL = "anthropic/claude-haiku-4-5"
-
-    # Neo4j database
-    NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
-    NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-    NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
-    ## create a .env file to save URI, USER and PASSWORD for Neo4j
-
-    # Experiment settings
-    SAMPLE_SIZE = 100
-    FEW_SHOT_EXAMPLES = 5
     MAX_OUTPUT_TOKENS = 1500
     TEMPERATURE = 0.0
 
-    @staticmethod
-    def get_llm_client():
-        if not Config.PERPLEXITY_API_KEY:
-            raise ValueError("PERPLEXITY_API_KEY not found in .env file.")
-        return Perplexity(api_key=Config.PERPLEXITY_API_KEY)
+    # Neo4j database
+    NEO4J_URI = os.getenv("NEO4J_URI")
+    NEO4J_USER = os.getenv("NEO4J_USER")
+    NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+    ## create a .env file to save URI, USER and PASSWORD for Neo4j
+
+    # CSV format
+    CSV_TEXT_COLUMN = 0
+    CSV_HAS_HEADER = True
+    CSV_ENCODING = "utf-8"
+
+    # Experiment settings
+    SAMPLE_SIZE = 100
+    FEW_SHOT_COUNT = 5
     
     # KG ontology
     ENTITY_TYPES: List[str] = [
@@ -113,33 +119,59 @@ class Config:
 ]
 
     EXTRACTION_PROMPT = """
-You are a traffic accident KG expert. Extract {entity_types} and {relations} as triples.
+You are a traffic accident analysis and Knowledge Graph construction expert. Extract {entity_types} and {relationship_types} as triples.
+Output ONLY valid JSON triples: [{{"head": "...", "relation": "...", "tail": "..."}}]
+
+Allowed entity types: {entity_types}
+Allowed relationship types: {relationship_types}
 
 Few-shot examples:
-{examples}
+{few_show_examples}
 
-Extract from: "{text}"
-Output ONLY valid JSON triples: [{{"head": "...", "relation": "...", "tail": "..."}}]
+Now extract from: "{text}"
 """
     
+    # checked esitency of API, Few-shot examples, directories.
+    @staticmethod
+    def get_llm_client():
+        if not Config.PERPLEXITY_API_KEY:
+            raise ValueError("PERPLEXITY_API_KEY not found in .env file.")
+        return Perplexity(api_key=Config.PERPLEXITY_API_KEY)
+
     @staticmethod
     def build_extraction_prompt(text: str) -> str:
         """Builds complete LLM prompt with few-shot."""
         examples_str = "\n".join([
             f"Text: {ex['text']}\nTriples: {ex['triples']}\n"
-            for ex in Config.FEW_SHOT_EXAMPLES[:Config.FEW_SHOT_EXAMPLES]
+            for ex in Config.FEW_SHOT_EXAMPLES[:Config.FEW_SHOT_COUNT]
         ])
         return Config.EXTRACTION_PROMPT.format(
-            entity_types=", ".join(Config.ENTITY_TYPES),
-            relations=", ".join(Config.RELATIONSHIP_TYPES),
-            examples=examples_str,
-            text=text
+            entity_types = ", ".join(Config.ENTITY_TYPES),
+            relationship_types = ", ".join(Config.RELATIONSHIP_TYPES),
+            few_show_examples = examples_str,
+            text = text
         )
+    
+    @staticmethod
+    def ensure_dirs():
+        """Ensure necessary directories exist."""
+        Config.DATA_DIR.mkdir(parents=True, exist_ok=True)
+        Config.RAW_CSV_DIR.mkdir(parents=True, exist_ok=True)
+        Config.PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+        print("Directories ready!")
 
 # Test
 if __name__ == "__main__":
-    print("Config loaded!")
-    print(f"Entities: {len(Config.ENTITY_TYPES)} types")
-    print(f"Relations: {len(Config.RELATIONSHIP_TYPES)} types")
-    print(f"Few-shot: {len(Config.FEW_SHOT_EXAMPLES)} examples")
-    print("Ready for kg_extraction!")
+    Config.ensure_dirs()
+    print(f"Raw CSV dir  : {Config.RAW_CSV_DIR}")
+    print(f"Processed dir: {Config.PROCESSED_DIR}")
+    print(f"API Key found: {'Y' if Config.PERPLEXITY_API_KEY else 'Missing!'}")
+    print(f"Neo4j URI    : {Config.NEO4J_URI}")
+    print(f"Entities     : {len(Config.ENTITY_TYPES)} types")
+    print(f"Relations    : {len(Config.RELATIONSHIP_TYPES)} types")
+    print(f"Few-shot     : {len(Config.FEW_SHOT_EXAMPLES)} examples")
+
+    # Preview prompt
+    sample_text = "The accident occurred in City A at 6:00 am on 2/3/2022."
+    prompt = Config.build_extraction_prompt(sample_text)
+    print(f"\n Prompt preview (first 300 chars):\n{prompt[:300]}...")
