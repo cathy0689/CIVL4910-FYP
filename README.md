@@ -22,3 +22,9 @@ I use the Perplexity API, but it just support API of Sonar model instead of Clau
 Register Perplexity using UST email and upgarde it to education version to access the API. 
 
 Both "aaa.py" and "environment_test.env" are test files, download them and try running "aaa.py" your local device.
+
+### Dataset
+The dataset is from: https://github.com/Puw242/SafeTraffic/tree/main/data/WA/test
+"inj.csv", "sev.csv" and "type.csv" record same accident cases. The only different is the role and function of "Assistant:<...>",  in each case.
+"inj.csv" predicts number of people injured in the crash event, "sev.csv" predicts severity level of the crash, "type.csv" classifies type of crash.
+As our project doesn't require making predictions, so I clean content related to predictions in data_loader.py.
