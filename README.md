@@ -15,6 +15,7 @@ I am not sure which environments are already installed on my computer, so I list
 6. matplotlib
 7. scikit-learn
 8. transformers
+9. spacy, and en_core_web_lg
 
 ### API:
 I use the Perplexity API, but it just support API of Sonar model instead of Claude 4.5.
