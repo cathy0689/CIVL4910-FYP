@@ -1,0 +1,627 @@
+[
+  {
+    "case_id": "WA_0",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_0",
+        "relation": "OCCUR_AT",
+        "tail": "March 2, 2022 5:00 AM"
+      },
+      {
+        "head": "WA_0",
+        "relation": "OCCUR_IN",
+        "tail": "Richland, Benton"
+      },
+      {
+        "head": "WA_0",
+        "relation": "OCCUR_IN",
+        "tail": "Route 182"
+      },
+      {
+        "head": "WA_0",
+        "relation": "BELONG_TO",
+        "tail": "urban freeways with fewer than 4 lanes"
+      },
+      {
+        "head": "WA_0",
+        "relation": "AFFECTED_BY",
+        "tail": "dawn"
+      },
+      {
+        "head": "WA_0",
+        "relation": "AFFECTED_BY",
+        "tail": "wet road surface"
+      },
+      {
+        "head": "speeding",
+        "relation": "CAUSE",
+        "tail": "WA_0"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_0"
+      },
+      {
+        "head": "WA_0",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_0",
+        "relation": "INVOLVE",
+        "tail": "Roadway Ditch"
+      },
+      {
+        "head": "WA_0",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Female, Age 24"
+      }
+    ],
+    "triple_count": 13,
+    "processing_time_s": 0.0868
+  },
+  {
+    "case_id": "WA_1",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_1",
+        "relation": "OCCUR_AT",
+        "tail": "May 15, 2022 8:00 PM"
+      },
+      {
+        "head": "WA_1",
+        "relation": "OCCUR_IN",
+        "tail": "Normandy Park"
+      },
+      {
+        "head": "WA_1",
+        "relation": "OCCUR_IN",
+        "tail": "King county"
+      },
+      {
+        "head": "WA_1",
+        "relation": "AFFECTED_BY",
+        "tail": "rain"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_1"
+      },
+      {
+        "head": "distracted driving",
+        "relation": "CAUSE",
+        "tail": "WA_1"
+      },
+      {
+        "head": "WA_1",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_1",
+        "relation": "INVOLVE",
+        "tail": "utility pole and a tree or stump"
+      }
+    ],
+    "triple_count": 8,
+    "processing_time_s": 0.0545
+  },
+  {
+    "case_id": "WA_2",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_2",
+        "relation": "OCCUR_AT",
+        "tail": "October 21, 2022 10:00 AM"
+      },
+      {
+        "head": "WA_2",
+        "relation": "OCCUR_IN",
+        "tail": "Bellevue, King County"
+      },
+      {
+        "head": "WA_2",
+        "relation": "OCCUR_IN",
+        "tail": "Route 090"
+      },
+      {
+        "head": "WA_2",
+        "relation": "AFFECTED_BY",
+        "tail": "clear"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_2"
+      },
+      {
+        "head": "WA_2",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_2",
+        "relation": "INVOLVE",
+        "tail": "Vehicle2"
+      },
+      {
+        "head": "WA_2",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 33"
+      },
+      {
+        "head": "WA_2",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Female, Age 62"
+      }
+    ],
+    "triple_count": 13,
+    "processing_time_s": 0.0645
+  },
+  {
+    "case_id": "WA_3",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_3",
+        "relation": "OCCUR_AT",
+        "tail": "February 3, 2022 10:00 AM"
+      },
+      {
+        "head": "WA_3",
+        "relation": "OCCUR_IN",
+        "tail": "Lynnwood, Snohomish"
+      },
+      {
+        "head": "WA_3",
+        "relation": "OCCUR_IN",
+        "tail": "Route 524"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_3"
+      },
+      {
+        "head": "WA_3",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_3",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 86"
+      },
+      {
+        "head": "WA_3",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Female, Age 23"
+      }
+    ],
+    "triple_count": 11,
+    "processing_time_s": 0.0589
+  },
+  {
+    "case_id": "WA_4",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_4",
+        "relation": "OCCUR_AT",
+        "tail": "April 8, 2022 4:00 PM"
+      },
+      {
+        "head": "WA_4",
+        "relation": "OCCUR_IN",
+        "tail": "Kennewick"
+      },
+      {
+        "head": "WA_4",
+        "relation": "OCCUR_IN",
+        "tail": "Benton"
+      },
+      {
+        "head": "WA_4",
+        "relation": "AFFECTED_BY",
+        "tail": "dry road surface"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_4"
+      },
+      {
+        "head": "WA_4",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_4",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 44"
+      },
+      {
+        "head": "WA_4",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 25"
+      }
+    ],
+    "triple_count": 12,
+    "processing_time_s": 0.0628
+  },
+  {
+    "case_id": "WA_5",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_5",
+        "relation": "OCCUR_AT",
+        "tail": "September 2, 2022 2:00 PM"
+      },
+      {
+        "head": "WA_5",
+        "relation": "OCCUR_IN",
+        "tail": "Kittitas"
+      },
+      {
+        "head": "WA_5",
+        "relation": "AFFECTED_BY",
+        "tail": "dry road surface"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_5"
+      },
+      {
+        "head": "WA_5",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_5",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 56"
+      }
+    ],
+    "triple_count": 8,
+    "processing_time_s": 0.0495
+  },
+  {
+    "case_id": "WA_6",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_6",
+        "relation": "OCCUR_AT",
+        "tail": "January 11, 2022 10:00 AM"
+      },
+      {
+        "head": "WA_6",
+        "relation": "OCCUR_IN",
+        "tail": "Lacey"
+      },
+      {
+        "head": "WA_6",
+        "relation": "AFFECTED_BY",
+        "tail": "wet road surface"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_6"
+      },
+      {
+        "head": "WA_6",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_6",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 33"
+      },
+      {
+        "head": "WA_6",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 50"
+      }
+    ],
+    "triple_count": 11,
+    "processing_time_s": 0.0593
+  },
+  {
+    "case_id": "WA_7",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_7",
+        "relation": "OCCUR_AT",
+        "tail": "August 20, 2022 12:00 PM"
+      },
+      {
+        "head": "WA_7",
+        "relation": "OCCUR_IN",
+        "tail": "Pierce county"
+      },
+      {
+        "head": "WA_7",
+        "relation": "BELONG_TO",
+        "tail": "described as an Urban Multilane Undivided Non-Freeway"
+      },
+      {
+        "head": "WA_7",
+        "relation": "AFFECTED_BY",
+        "tail": "dry road surface"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_7"
+      },
+      {
+        "head": "WA_7",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_7",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Passenger"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 26"
+      },
+      {
+        "head": "WA_7",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Female, Age 42"
+      }
+    ],
+    "triple_count": 12,
+    "processing_time_s": 0.0579
+  },
+  {
+    "case_id": "WA_8",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_8",
+        "relation": "OCCUR_AT",
+        "tail": "February 3, 2022 7:00 PM"
+      },
+      {
+        "head": "WA_8",
+        "relation": "OCCUR_IN",
+        "tail": "Mason county"
+      },
+      {
+        "head": "WA_8",
+        "relation": "AFFECTED_BY",
+        "tail": "dry road surface"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_8"
+      },
+      {
+        "head": "distracted driving",
+        "relation": "CAUSE",
+        "tail": "WA_8"
+      },
+      {
+        "head": "WA_8",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_8",
+        "relation": "INVOLVE",
+        "tail": "stationary boulder"
+      },
+      {
+        "head": "WA_8",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Female, Age 37"
+      }
+    ],
+    "triple_count": 10,
+    "processing_time_s": 0.0489
+  },
+  {
+    "case_id": "WA_9",
+    "source": "WA",
+    "triples": [
+      {
+        "head": "WA_9",
+        "relation": "OCCUR_AT",
+        "tail": "January 27, 2022 3:00 PM"
+      },
+      {
+        "head": "WA_9",
+        "relation": "OCCUR_IN",
+        "tail": "Kitsap County"
+      },
+      {
+        "head": "WA_9",
+        "relation": "AFFECTED_BY",
+        "tail": "dry road surface"
+      },
+      {
+        "head": "drunk driving",
+        "relation": "CAUSE",
+        "tail": "WA_9"
+      },
+      {
+        "head": "WA_9",
+        "relation": "INVOLVE",
+        "tail": "Vehicle1"
+      },
+      {
+        "head": "WA_9",
+        "relation": "INVOLVE",
+        "tail": "Person1"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person1",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 69"
+      },
+      {
+        "head": "WA_9",
+        "relation": "INVOLVE",
+        "tail": "Person2"
+      },
+      {
+        "head": "Person2",
+        "relation": "INVOLVE",
+        "tail": "Motor Vehicle Driver"
+      },
+      {
+        "head": "Person2",
+        "relation": "INVOLVE",
+        "tail": "Male, Age 56"
+      }
+    ],
+    "triple_count": 11,
+    "processing_time_s": 0.0606
+  }
+]
