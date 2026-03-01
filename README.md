@@ -18,7 +18,8 @@ I am not sure which environments are already installed on my computer, so I list
 9. spacy, and en_core_web_lg
 
 ### API:
-I use the Perplexity API, but it just support API of Sonar model instead of Claude 4.5.
+I use the Perplexity API. It only supports Sonar model in chat completion mode, but all model in response mode.
+See config.py and the Perplexity API website for instructions on how to access other models.
 
 Register Perplexity using UST email and upgarde it to education version to access the API. 
 
